@@ -1,0 +1,208 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hallo
+    - guten morgen
+    - guten abend
+    - nabend
+    - servus
+    - was geht
+    - alles klar bei dir
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - ja
+    - jap
+    - jo
+    - aufjedenfall
+    - sehr gerne
+    - wieso nicht
+    - na klar
+    - sicha
+    - sicher
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nein
+    - nope
+    - auf keinen fall
+    - niemals
+    - überhaut nicht
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - sehr gut
+    - super
+    - gut
+    - ich fühle mich super
+    - ich fühle mich richtig gut
+    - unnormal gut
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - nicht gut
+    - garnicht gut
+    - schlecht
+    - sehr schlecht
+  
+- intent: ask_help_eduroam
+  examples: |
+    - wie komme ich in das Hochschul Wlan Netz?
+    - kannst du mir mit der einrichtung von dem eduroam helfen?
+    - wie funktioniert eduroam?
+    - gibt es wlan in der Hochschule?
+    - wie kann ich eduroam installieren?
+    - wie bekomme ich internet in der Hochschule?
+    - ich komme nicht in das Wlan in der Hoschule.
+    - wie heißt das Wlan für studenten.
+    - ich möchte mehr über das Wlan an der Hochschule erfahren.
+    - ich möchte mich in das Eduroam Wlan einloggen.
+    - ich möchte das Wlan der Hochschule nutzen.
+    
+- intent: ask_help_oracle
+  examples: |
+    - ich habe Probleme mit meiner Email adresse
+    - wie kann ich mein email postfach einrichten.
+    - wie verbinde ich meine email adresse mit meinem mailsystem?
+    - wo finde ich nochmal meine emails?
+    - hast du einen Link zu meinen email postfach?
+    - wie komme ich nochmal zu meinen emails?
+    - ich suche gerade das email postfach für studenten.
+    - ich möchte etwas über das postfach für studenten erfahren.
+    - ich möchte mehr über oracle erfahren.
+
+- intent: ask_termine_fristen
+  examples: |
+    - Bis wann sollen die Semestergebühren überwiesen worden sein?
+    - Wann sind die Semestergebühren fällig?
+    - Wie sind die Rückmelde Fristen?
+    - wie sieht die Klausurphase dieses Semester aus?
+    - wie sieht die Klausurphase nächstes Semester aus?
+    - ich möchte etwas über die Klausurphase wissen.
+    - Wann sind Semesterferien?
+    - wann beginnt das Sommersemester?
+    - wann beginnt das Wintersemester?
+    - ab wann kann ich mich zu den Prüfungen anmelden?
+    - zu welcher zeit finden die Prüfungen statt?
+    - wann gehen die Vorlesungen los?
+    - welche wichtigen termine oder fristen gibt es?
+    - ich möchte etwas über die termine und fristen erfahren.
+    - bis wann muss ich mich zurückmelden?
+    - in welchen Zeiten können die Klausuren geschrieben werden?
+
+- intent: ask_studywith_children
+  examples: |
+    - wohin mit meinem kind während der vorlesungen?
+    - gibt es eine kita an der Hochschule?
+    - ich brauche einen kindergarten für mein kind.
+    - ich brauche unterstützung im studium mit kind.
+    - ich möchte mehr über die kinderbetreuung erfahren.
+    - ich würde gerne mehr über die kinderbetreuung wissen.
+    - gibt es Angebote für studierende mit kind?
+    - Kinderbetreueng an der Hochschule
+    - gibt es eine Tageseinrichtung für kinder?
+
+- intent: ask_studycoaching
+  examples: |
+    - ich habe zweifel am studium.
+    - ich zweifel an meinem studiumsfach.
+    - ich habe probleme im studium.
+    - ich könnte ein studierendencoaching gebrauchen.
+    - ich komme im studium nicht hinterher.
+    - ich verzweifel aktuell ziemlich an meinem studium.
+    - ich kann meine studiengebühren nicht bezahlen.
+    - die finanzierung meines studiums fällt mir sehr schwer.
+    - ich komme mit meinen finanzen nicht klar.
+    - das studieren schlägt auf meine psyche.
+    - ich möchte mehr über Studienfinanzierung wissen.
+    - wie finanziere ich mir mein Studium?
+    - ich könnte hilfe beim lernen gebrauchen.
+    - gibt es eine art Nachhilfe für studenten?
+    - wie lerne ich richtig für das studium?
+    - ich bräuchte eine beratung zu meiner studienwahl.
+
+- intent: inform
+  examples: |
+    - [stein](choice)
+    - [papier](choice)
+    - [schere](choice)
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - bist du ein bot?
+    - bist du ein mensch?
+    - rede ich mit einem bot?
+    - rede ich mit einem menschen?

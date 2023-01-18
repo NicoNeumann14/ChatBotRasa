@@ -1,0 +1,88 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - inform
+  - ask_help_eduroam
+  - ask_help_oracle
+  - ask_termine_fristen
+  - ask_studywith_children
+  - ask_studycoaching
+
+entities: 
+  - choice
+
+slots:
+  choice:
+    type: categorical
+    values: 
+      - stein
+      - papier
+      - schere
+    mappings:
+    - type: from_entity
+      entity: choice
+
+
+responses:
+  utter_greet:
+  - text: "Hey! wie geht es dir?"
+
+  utter_cheer_up:
+  - text: "Hier ist etwas, um dich ein wenig aufzumuntern:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Hat das etwas geholfen?"
+
+  utter_happy:
+  - text: "Das freut mich zu hören."
+
+  utter_ask_play_rps:
+  - text: "Lust auf eine Runde Schere-Stein-Papier?"
+
+  utter_play_rps:
+  - text: "Schreib 'stein', 'papier' oder 'schere' in den Chat zum Spielen."
+
+  utter_play_rps_again:
+  - text: "Noch eine weitere Runde spielen?"
+
+  utter_ask_help_or_play:
+  - text: "OKay schade wenn du spielen möchtest oder Fragen hast, gib mir bescheid :D"
+
+  utter_answ_oracle:
+  - text: "Nachfolgend finden Sie die Informationen zur Einrichtung der Mailclients und zum Zugriff auf das Studierenden Mailsystem (Oracle Convergence)."
+    image: "https://www.hochschule-bochum.de/cit/anleitungen/studmail-1/"
+  
+  utter_answ_eduroam:
+  - text: "Unter folgendem Link finden Sie Informationen zur Installation und Nutzung von eduroam, unserem Hochschul WLAN"
+    image: "https://www.hochschule-bochum.de/cit/anleitungen/wlan-2/"
+  
+  utter_answ_termine_fristen:
+  - text: "Wenn Sie dem Link folgen, erhalten Sie Informationen zu den wichtigen Fristen und Terminen. \nhttps://www.hochschule-bochum.de/studienbueros/uebersicht/termine-fristen/"
+
+  utter_answ_studywith_children:
+  - text: "Informationen rund um das Thema studieren mit Kindern, finden Sie unter nachfolgendem Link. \nhttps://www.hochschule-bochum.de/studienbueros/uebersicht/termine-fristen/"
+  
+  utter_answ_studycoaching:
+  - text: "Hier finden Sie alles Wissenswerte zum Thema Studierendencoaching, Studienfinanzierung, Psychosoziale Beratung und Allgemeine Studienberatung. \nhttps://www.hochschule-bochum.de/studium-lehre/im-studium/studienberatung-studierendencoaching/"
+
+  utter_goodbye:
+  - text: "Bye Bye"
+
+  utter_iamabot:
+  - text: "Ich bin ein Bot, powered by Rasa."
+
+actions:
+  - action_play_rps
+  - action_timer_ask
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

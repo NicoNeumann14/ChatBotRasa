@@ -1,0 +1,81 @@
+version: "3.1"
+
+stories:
+
+- story: happy path 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_ask_play_rps
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_ask_play_rps
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_ask_help_or_play
+  - action: action_timer_ask
+
+# rps = rock paper scissors
+- story: Play rps? True
+  steps:
+  - action: utter_ask_play_rps
+  - intent: affirm
+  - action: utter_play_rps
+  - intent: inform
+  - action: action_play_rps
+  - action: utter_play_rps_again
+
+- story: Play rps again? True
+  steps:
+  - action: utter_play_rps_again
+  - intent: affirm
+  - action: utter_play_rps 
+
+- story: Play rps again? False
+  steps:
+  - action: utter_play_rps_again
+  - intent: deny
+  - action: utter_ask_help_or_play
+
+
+- story: help out oracle 
+  steps:
+    - intent: ask_help_oracle
+    - action: utter_answ_oracle
+
+- story: help out eduroam 
+  steps:
+    - intent: ask_help_eduroam
+    - action: utter_answ_eduroam
+
+- story: help out termine fristen 
+  steps:
+    - intent: ask_termine_fristen
+    - action: utter_answ_termine_fristen
+
+- story: help out studywith children 
+  steps:
+    - intent: ask_studywith_children
+    - action: utter_answ_studywith_children
+
+- story: help out studycoaching 
+  steps:
+    - intent: ask_studycoaching
+    - action: utter_answ_studycoaching
