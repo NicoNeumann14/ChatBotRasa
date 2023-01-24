@@ -14,6 +14,11 @@ intents:
   - ask_termine_fristen
   - ask_studywith_children
   - ask_studycoaching
+  - ask_wahlpflichtfach
+  - ask_anfahrt
+  - ask_praktorg
+  - ask_sozialMedia
+  - ask_studenplan
 
 entities: 
   - choice
@@ -54,7 +59,22 @@ responses:
   - text: "Noch eine weitere Runde spielen?"
 
   utter_ask_help_or_play:
-  - text: "OKay schade wenn du spielen möchtest oder Fragen hast, gib mir bescheid :D"
+  - text: "OKay schade wenn du Spielen möchtest oder Fragen hast, gib mir bescheid :D"
+
+  utter_answ_stundenplan:
+  - text: "Links zu den Stundenplänen finden Sie neben ihrem Fachberei \nFB Bauingenieruwesen https://wwwccb.hochschule-bochum.de/campusInfo/indexFBBVisitor.php \nFB Geodäsie https://wwwccb.hochschule-bochum.de/campusInfo/indexFBGVisitor.php \nFB Elektrotechnik & Informatik https://wwwccb.hochschule-bochum.de/campusInfo/indexFBEVisitor.php \nFB Mechatronik & Maschinenbau https://wwwccb.hochschule-bochum.de/campusInfo/indexFBMVisitor.php \nFB Wirtschaft https://wwwccb.hochschule-bochum.de/campusInfo/indexFBWVisitor.php"  
+
+  utter_answ_praktorg:
+  - text: "Alles rund ums Thema Praktikum finde Sie auf unserer Praktorg Seite. \nhttps://praktorg.hs-bochum.de/"
+
+  utter_answ_anfahrt:
+  - text: "Die besten Verbindungen mit dem Rad, Auto oder den ÖPNV finde sie unter nachfolgendem Link. \nhttps://www.hochschule-bochum.de/die-bo/informationen/anfahrten-gebaeude/"
+
+  utter_answ_sozial:
+  - text: "Unsere Sozial Media Kanäle: \nFacebook https://www.facebook.com/HochschuleBochum \nTwitter https://twitter.com/hochschuleBO \nInstagram https://www.instagram.com/hochschule_bochum"
+
+  utter_answ_wahlpflicht:
+  - text: "Eine Auswahl sowie passende Informationen zu Wahlpflichtfächern entnehmen Sie bitte dem Wahlpflichtkatalog. \nhttps://www.hochschule-bochum.de/fbe/studieren-im-fachbereich/fuer-studierende/wahlpflichtfaecher/"
 
   utter_answ_oracle:
   - text: "Nachfolgend finden Sie die Informationen zur Einrichtung der Mailclients und zum Zugriff auf das Studierenden Mailsystem (Oracle Convergence)."

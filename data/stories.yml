@@ -79,3 +79,28 @@ stories:
   steps:
     - intent: ask_studycoaching
     - action: utter_answ_studycoaching
+
+- story: help out anfahrt 
+  steps:
+    - intent: ask_anfahrt
+    - action: utter_answ_anfahrt
+
+- story: help out wahlpflicht 
+  steps:
+    - intent: ask_wahlpflichtfach
+    - action: utter_answ_wahlpflicht
+
+- story: help out praktorg 
+  steps:
+    - intent: ask_praktorg
+    - action: utter_answ_praktorg
+
+- story: help out sozialMedia 
+  steps:
+    - intent: ask_sozialMedia
+    - action: utter_answ_sozial
+
+- story: help out stundenplan 
+  steps:
+    - intent: ask_studenplan
+    - action: utter_answ_stundenplan

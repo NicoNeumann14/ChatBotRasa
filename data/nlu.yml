@@ -190,6 +190,58 @@ nlu:
     - wie lerne ich richtig für das studium?
     - ich bräuchte eine beratung zu meiner studienwahl.
 
+- intent: ask_studenplan
+  examples: |
+    - Wie sieht mein aktueller Stundenplan aus?
+    - Wo finde ich meinen Stundenplan?
+    - gibt es i.wo einen Stundenplan?
+    - Fallen diese Woche einer meiner Vorlesungen aus?
+    - Was fällt an Vorlesungen aus?
+    - In welchem Raum findet meine Vorlesung statt?
+    - Um wieviel Uhr starten meiene Vorlesungen?
+
+- intent: ask_sozialMedia
+  examples: |
+    - sozial Media
+    - Facebook
+    - Instagram
+    - Twitter
+
+- intent: ask_praktorg
+  examples: |
+    - wo kann ich mich für die Praktikas einschreiben?
+    - Praktorg
+    - Informationen zur laufenden Praktika finde ich wo?
+    - Ich würde gerne eine Fahrgemeinschaft für Praktikumstermine eintragen.
+    - wo kann ich eine Fahrgemeinschaft für die Praktikumstermine eintragen?
+
+- intent: ask_anfahrt
+  examples: |
+    - wie komme ich mit dem Auto zur Hochschule?
+    - fährt ein Bus oder Bahn direkt zur Hochschule?
+    - wie komme ich am besten mit den öpnv zur Hochschule?
+    - wie komme ich mit dem Rad zur Hochschule?
+    - Lageplan und Luftbilder der Hochschule Bochum.
+    - Gibt es einen Übersichtsplan vom Campus Bochum?
+    - Anfahrt mit dem Bus
+    - Anfahrt mit dem Rad
+    - Anfahrt mit dem Auto
+    - Wie komme ich zum Gebäude A?
+    - Wie komme ich zum Gebäude B?
+    - Wie komme ich zum Gebäude C?
+    - Wie komme ich zum Gebäude D?
+    - Wie komme ich zum Gebäude E?
+    - Wie komme ich zum Gebäude F?
+    - Wie komme ich zum Gebäude H?
+
+- intent: ask_wahlpflichtfach
+  examples: |
+    - Wahlpflichtkatalog
+    - informationen zu den Wahlpflicht fächern
+    - welche fächer gibt es zur Auswahl bei dem Wahlpflichtfächern?
+    - Wahlpflichtfächer
+    - Welche Wahlpflichtfächer werden an der Hoschule Bochum angeboten?
+
 - intent: inform
   examples: |
     - [stein](choice)
