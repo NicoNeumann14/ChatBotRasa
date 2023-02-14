@@ -131,6 +131,8 @@ class CallRasaCore(Action):
                 cursor.close()
                 conn.close()
             
-        dispatcher.utter_message(text="DB CALL = "+record)
+        dispatcher.utter_message(text="DB CALL:")
+        for i in record:
+            dispatcher.utter_message(text=i)
 
         return []

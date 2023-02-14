@@ -12,7 +12,7 @@
 
 #action_endpoint:
   #url: "http://localhost:5055/webhook"
-# Usind Docker
+#Usind Docker
 action_endpoint:
   url: "http://rasa-actions-server:5055/webhook"
 
@@ -21,12 +21,12 @@ action_endpoint:
 # https://rasa.com/docs/rasa/tracker-stores
 
 tracker_store:
-      type: SQL
-      dialect: "postgresql"  # the dialect used to interact with the db
-      url: "http://postgres:5432/"
-      db: "rasa"  # name to your db
-      username: "postgres" # username used for authentication
-      password: "123456" # password used for authentication
+  type: SQL
+  dialect: "postgresql"  # the dialect used to interact with the db
+  url: "postgres:5432/"
+  db: "rasa"  # name to your db
+  username: "postgres" # username used for authentication
+  password: "123456" # password used for authentication
 
 
 #tracker_store:
