@@ -2,13 +2,13 @@ version: '3.4'
 
 services:
   rasa-server:
-    image: rasa/rasa:latest
+    image: rasa/rasa-core:latest
     working_dir: /app
     build: "./"
     restart: always
     volumes:
-    #- ./actions:/app/actions
-    #- ./data:/app/data
+    - ./actions:/app/actions
+    - ./data:/app/data
     - ./models:/app/models
     #command: bash -c "rm -rf models/* && rasa train && rasa run --enable-api --cors \"*\" --debug"
     command: bash -c "rasa run"
@@ -24,12 +24,25 @@ services:
     restart: always
     volumes:
     - ./actions:/app/actions
+    #- ./utils:/app/utils
     command: ["rasa", "run", "actions"]
     ports:
     - '5055:5055'
     networks:
     - all
 
+  postgres:
+    image: postgres:latest
+    restart: always
+    ports:
+    - '5432:5432'
+    environment:
+      POSTGRES_PASSWORD: "123456"
+      POSTGRES_DB: "rasa"
+    networks:
+      - all
+
+  
 networks:
   all:
     driver: bridge

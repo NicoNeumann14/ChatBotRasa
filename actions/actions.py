@@ -79,3 +79,58 @@ class ActionTimerAsk(Action):
         dispatcher.utter_message(text="Eyyyyy die 60 sekunde sind vorbei, wach werden!!!!!!!")
  
         return []
+
+#API-Call -> Http-Post to Bezeeptor
+import requests
+class CallRasaCore(Action):
+
+    def name(self) -> Text:
+        return "action_httpPost_Beceeptor"
+
+    async def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        url = 'https://lm2022.free.beeceptor.com/RasaPost'
+        myobj = {"sender":"Nico", "text":"UserEingabe"}
+
+        x = requests.post(url, json = myobj)
+
+        dispatcher.utter_message(text=x.text)
+
+        
+        return []
+
+import psycopg2
+from psycopg2 import Error
+class CallRasaCore(Action):
+
+    def name(self) -> Text:
+        return "action_call_dbcount"
+
+    async def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        try:
+            conn = psycopg2.connect(database="rasa",
+                            host="postgres",
+                            user="postgres",
+                            password="123456",
+                            port="5432")
+
+            cursor = conn.cursor()
+
+            cursor.execute("SELECT version();")
+            record = cursor.fetchall()
+
+        except (Exception, Error) as error:
+            print("Error while connecting to PostgreSQL", error)
+        
+        finally:
+            if(conn):
+                cursor.close()
+                conn.close()
+            
+        dispatcher.utter_message(text="DB CALL = "+record)
+
+        return []

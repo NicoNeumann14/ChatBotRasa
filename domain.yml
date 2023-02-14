@@ -19,6 +19,7 @@ intents:
   - ask_praktorg
   - ask_sozialMedia
   - ask_studenplan
+  - api_call_menu
 
 entities: 
   - choice
@@ -99,9 +100,18 @@ responses:
   utter_iamabot:
   - text: "Ich bin ein Bot, powered by Rasa."
 
+  utter_httpPost_Beceeptor:
+  - text: "API-Call sender:Nico, text:UserEingabe, via HTTP-Post an Beeceptor senden?"
+
+  utter_dbcall_count:
+  - text: "API-Call Count Conversationen, an Postgres Database senden?"
+
+
 actions:
   - action_play_rps
   - action_timer_ask
+  - action_httpPost_Beceeptor
+  - action_call_dbcount
 
 session_config:
   session_expiration_time: 60

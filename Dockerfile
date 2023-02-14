@@ -14,7 +14,8 @@ WORKDIR /app
 # upgrade pip version
 RUN pip install --no-cache-dir --upgrade pip
 
-RUN pip install rasa==3.4.0
+RUN pip install rasa==3.4.0 spacy==3.4
+RUN pip install psycopg2-binary
 
 ADD config.yml config.yml
 ADD domain.yml domain.yml

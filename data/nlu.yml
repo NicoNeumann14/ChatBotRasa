@@ -258,3 +258,11 @@ nlu:
     - bist du ein mensch?
     - rede ich mit einem bot?
     - rede ich mit einem menschen?
+
+- intent: api_call_menu
+  examples: |
+    - API Call
+    - !api
+    - !menu
+    - api
+    - menu

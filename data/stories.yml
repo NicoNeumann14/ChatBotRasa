@@ -104,3 +104,18 @@ stories:
   steps:
     - intent: ask_studenplan
     - action: utter_answ_stundenplan
+
+- story: API menu httpPost
+  steps:
+  - intent: api_call_menu
+  - action: utter_httpPost_Beceeptor
+  - intent: affirm
+  - action: action_httpPost_Beceeptor
+
+- story: API menu countDB
+  steps:
+  - action: utter_httpPost_Beceeptor
+  - intent: deny
+  - action: utter_dbcall_count
+  - intent: affirm
+  - action: action_call_dbcount
